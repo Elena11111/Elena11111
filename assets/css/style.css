@@ -1,0 +1,311 @@
+html,body{
+  margin: 0; /* Точка отсчета*/
+  padding: 0; /* Точка отсчета*/
+}
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+/*надо вставлять, чтобы работал clearfix, н-р отсюда https://css-tricks.com/snippets/css/clear-fix/*/
+.clearfix {
+display: inline-block; /*обозначает строчно-блочный элемент*/
+display: block; /*обозначает блочный элемент*/
+
+}
+* html .clearfix {
+height: 1%; /*высота 1 процент*/
+}
+
+@font-face{
+  font-family: HN; /*Имя шрифта*/
+  src:url(../fonts/Helvetica-Normal.ttf); /*Путь к файлу со шрифтами*/
+}
+@font-face{
+  font-family: OS; /*Имя шрифта*/
+  src:url(../fonts/OpenSans-Regular.ttf); /*Путь к файлу со шрифтами*/
+}
+@font-face{
+  font-family: HNe; /*Имя шрифта*/
+  src:url(../fonts/HelveticaNeue.ttf); /*Путь к файлу со шрифтами*/
+}
+@font-face{
+  font-family: HNeB; /*Имя шрифта*/
+  src:url(../fonts/HelveticaNeue-Bold.ttf); /*Путь к файлу со шрифтами*/
+}
+@font-face{
+  font-family: HB; /*Имя шрифта*/
+  src:url(../fonts/Helvetica-Bold.ttf); /*Путь к файлу со шрифтами*/
+}
+@font-face{
+  font-family: HNeL; /*Имя шрифта*/
+  src:url(../fonts/HelveticaNeueLight.ttf); /*Путь к файлу со шрифтами*/
+}
+.telefon{
+  width: 100%; /*Ширина 100%*/
+  height: 43px; /*Высота блока*/
+  background:#f0f2f4; /*Цвет фона*/
+}
+.container{
+  width:1024px; /*Ширина*/
+  margin: 0px auto; /*Внешние отступы*/
+}
+.tel{
+  display: flex;
+  float:right;
+}
+.tel1{
+  padding: 13px 23px 14px 25px;
+  background-image: url("../img/blok1_2.png");
+  text-align: right;
+  background-repeat: no-repeat;
+  background-size: 11px auto;
+  background-position: left center;
+  font-size: 10px; /* Размер текста */
+  font-family: HN, sans-serif;
+}
+.tel2{
+  padding: 13px 12px 14px 25px;
+  background-image: url("../img/blok1_1.png");
+  text-align: right;
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: left center;
+  font-size: 10px; /* Размер текста */
+  font-family: HN, sans-serif;
+}
+.tel3{
+  padding: 7px 0px 7px 0px;
+  background-position: right center;
+}
+.logo{
+  float: left;
+  padding:10px 12px 0px 0px;
+}
+.menu{
+  background:#ffffff; /*Цвет фона*/
+  padding:33px 0px 33px 0px; /*Внутренние отступы*/
+  /* position: fixed; Способ позиционирования меню*/
+  top: 0; /*От верха*/
+  left: 0; /*От левой сторны*/
+  width: 100%; /*Ширина 100%*/
+}
+.menu .container div:nth-child(2){
+  float: left;
+}
+.menu .container div:nth-child(3){
+  float: right;
+  display: flex;
+}
+.menu .container div p:nth-child(1){
+  font-family: HNeB, sans-serif;
+  font-size: 25px; /* Размер текста */
+  line-height: 0.1;
+}
+.menu .container div p:nth-child(2){
+  font-family: HNe, sans-serif;
+  font-size: 9px; /* Размер текста */
+  line-height: 0.1;
+}
+.menu .container div:nth-child(3) a{
+  color:#000000; /* Цвет текста */
+  text-decoration: none; /* Убираем подчеркивание у ссылок */
+  font-size: 11px; /* Размер текста */
+  text-transform: capitalize; /* Все слова с большой буквы */
+  padding: 20px 10px; /* Внутренние отступы */
+  margin-top: 2px; /* Наружные отступы */
+  display: block;
+  transition: 0.3s; /* Плавный переход к другому цвету текста */
+  opacity:1; /* Уровень прозрачности элемента */
+  font-size: 10px; /* Размер текста */
+  font-family:HNeB, sans-serif; /* Выбор шрифта, через запятую-если шрифта не окажется, то появ.стандарный */
+}
+.menu .container div:nth-child(3) img{
+width: 5px;
+height: 5px;
+padding: 22px 10px; /* Внутренние отступы */
+margin-top: 2px; /* Наружные отступы */
+}
+.menu .container div:nth-child(3) a:hover{
+  color:#ff0000;
+}
+.menu .container div:nth-child(3) a:last-child{
+  color: #ffffff;
+  background-color: #f2f2f2; /* Цвет текста */
+  text-decoration: none; /* Убираем подчеркивание у ссылок */
+  font-size: 11px; /* Размер текста */
+  text-transform: capitalize; /* Все слова с большой буквы */
+  padding: 12px 5px 13px 5px; /* Внутренние отступы */
+  display: block;
+  margin: auto;
+  background: #de2b24;
+  text-align: center;
+  border-radius: 5px;
+  font-family:HNeB, sans-serif;
+}
+.section-one{
+  background-image: url("../img/blok3_1.png");
+  /* margin-top: 130px;  Пока не нужны Наружные отступы */
+}
+.section-one .container p:nth-child(1) {
+  width: 100%;
+  color:#ffffff;
+  font-size: 34px;
+  text-align: center;
+  margin-top: 179px;
+  font-family:HNeB, sans-serif;
+}
+.section-one .container p:nth-child(2) {
+  width: 100%;
+  color:#ffffff;
+  font-size: 22px;
+  padding: 0px 0px 38px;
+  text-align: center;
+  font-family:HNeL, sans-serif;
+}
+.section-one .container p:nth-child(3) {
+  width: 330px;
+  color:#ffffff;
+  font-size: 18px;
+  margin: auto;
+  background: #f8cd53;
+  padding: 26px 40px;
+  text-align: center;
+  border-radius: 5px;
+  font-family:HNeB, sans-serif;
+}
+.section-one {
+  padding: 180px 0px;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  /* горизонтальные скроллы right: 20px; */
+}
+.phone{
+position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.section-two {
+  height: 540px;
+}
+.section-two .container .one-w{
+float:  left;
+width:100%;
+text-align: center;
+margin-top: 10px;
+}
+.line{
+  height: 5px;
+  width: 47px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+}
+.section-two .container .one-three{
+float:left;
+width:20%;
+text-align: center;
+margin-top: 46px;
+}
+.section-two .container .one-three:nth-child(2){
+margin:46px 20% 0px;
+}
+.text{
+  font-size: 16px;/* Размер текста */
+  font-family:HNeB, sans-serif;
+}
+.text1{
+  font-size: 9px;/* Размер текста */
+  font-family:HNeL, sans-serif;
+}
+.text3{
+  font-size: 9px;/* Размер текста */
+  font-family:OS, sans-serif;
+}
+.section-three{
+  background: #f2f2f2;
+}
+.section-three .container .one-five1{
+float:  left;
+width:100%;
+text-align: center;
+margin-top: 10px;
+}
+.section-three .container .one-five1 p:nth-child(1){
+  width: 100%;
+  color:#000000;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 92px;
+  font-family:OSB, sans-serif;
+  margin: 0px;
+}
+.section-three .container .one-five1 p:nth-child(2){
+  width: 100%;
+  color:#000000;
+  font-size: 14px;
+  padding: 0px 0px 38px;
+  text-align: center;
+  font-family:OS, sans-serif;
+
+}
+.section-three .container .one-five{
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px 5px 5px 5px;
+}
+.section-three .container .one-five img:nth-child(1){
+float:left;
+width:20%;
+}
+.section-three .container .one-five img:nth-child(2){
+float:right;
+width:20%;
+
+}
+.section-three .container .one-five img:nth-child(3){
+float:left;
+width:20%;
+}
+.section-three .container .one-five img:nth-child(4){
+float:right;
+width:20%;
+}
+.section-three .container .one-five .ch_fon2{
+  background-color: #cc3333;
+  border: 2px solid #ffffff;
+  border-radius: 5px 5px 5px 5px;
+  width: 100px;
+  margin: auto;
+  padding: 18px 30px 18px 30px;
+}
+.section-three .container .one-five .ch_fon{
+  color:#ffffff;
+  font-size: 25px;
+  text-align: center;
+  font-family:OSB, sans-serif;
+  display: inline-block;
+  padding: 20px 37px 0px 37px;
+}
+.section-three .container .one-five .ch_fon1{
+  color:#ffffff;
+  font-size: 12px;
+  text-align: center;
+  font-family:OS, sans-serif;
+  display: inline-block;
+  padding: 7px 37px 20px 37px;
+}
+.blok6 {
+background: #cc3333;
+}
+.blok6 .container .blok6_vmeste{
+display: flex;
+flex-wrap: wrap;float:left;
+width:25%;
+text-align: center;
+}
